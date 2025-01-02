@@ -172,9 +172,13 @@ h3 {
   font-weight: var(--fw-semi-bold);
 }
 
+p {
+  line-height: 1.5;
+}
+
 a {
   text-decoration: none;
-  color: var(--clr-accent);
+  /* color: var(--clr-accent); */
 
   &:hover,
   &:focus-visible {
@@ -219,6 +223,14 @@ body {
 .nav-links {
   display: flex;
   list-style-type: none;
+  color: var(--clr-accent);
+}
+
+.nav-links > li > a {
+  color: var(--clr-accent);
+  &:hover {
+    color: var(--clr-neutral-100);
+  }
 }
 
 .nav-item {
@@ -227,17 +239,11 @@ body {
   transition: background-color 0.5s ease;
   &:hover {
     background-color: var(--clr-green-400);
-    color: var(--clr-neutral-100);
-    text-decoration: none;
   }
 }
 
 .hamburger-menu {
   display: none;
-}
-
-main {
-  height: 100%;
 }
 
 .hero {
@@ -264,7 +270,7 @@ main {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
   width: 60%;
-  height: 50%;
+  min-height: 500px;
   margin-inline: auto;
   margin-block: 1rem;
   background-color: var(--clr-neutral-100);
@@ -497,9 +503,53 @@ main {
   border-radius: 36px;
 }
 
+.footer {
+  background-color: var(--clr-green-400);
+  color: var(--clr-neutral-100);
+  padding: 3rem 1rem;
+}
+.footer-container {
+  display: flex;
+  width: 60%;
+  margin-inline: auto;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-block-end: 1rem;
+  text-transform: uppercase;
+}
+
+.contacts {
+  display: flex;
+  margin-block: 1rem;
+
+  img {
+    width: 18px;
+    height: 18px;
+    margin-inline-end: 1rem;
+  }
+}
+
+.footer-links ul > li {
+  list-style-type: none;
+  margin-block: 1rem;
+}
+
+.footer-links > ul > li > a {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-semi-bold);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 /* Tablet */
 
-@media (max-width: 768px) {
+@container (max-width: 768px) {
   /* Navbar */
   .nav-links {
     display: none;
@@ -576,11 +626,16 @@ main {
   .history-description {
     margin-block-end: 1.5rem;
   }
+
+  /* Footer */
+  .footer-links {
+    display: none;
+  }
 }
 
 /* Mobile */
 
-@media (max-width: 496px) {
+@container (max-width: 496px) {
   .card {
     max-width: 100%;
   }
