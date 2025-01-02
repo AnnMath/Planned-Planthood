@@ -287,7 +287,7 @@ body {
 }
 
 .collage-item:nth-child(2) {
-  background-image: url(https://picsum.photos/id/82/400/600);
+  background-image: url(https://picsum.photos/id/72/400/600);
   background-size: cover;
   background-position: center;
   grid-column: 3/4;
@@ -295,7 +295,7 @@ body {
 }
 
 .collage-item:nth-child(3) {
-  background-image: url(https://picsum.photos/id/82/400/600);
+  background-image: url(https://picsum.photos/id/75/400/600);
   background-size: cover;
   background-position: center;
   grid-column: 4/5;
@@ -303,7 +303,7 @@ body {
 }
 
 .collage-item:nth-child(4) {
-  background-image: url(https://picsum.photos/id/82/400/600);
+  background-image: url(https://picsum.photos/id/93/400/600);
   background-size: cover;
   background-position: center;
   grid-column: 5/7;
@@ -311,7 +311,7 @@ body {
 }
 
 .collage-item:nth-child(5) {
-  background-image: url(https://picsum.photos/id/82/400/600);
+  background: url(https://picsum.photos/id/102/400/600);
   background-size: cover;
   background-position: center;
   grid-column: 3/5;
@@ -319,7 +319,7 @@ body {
 }
 
 .collage-item:nth-child(6) {
-  background-image: url(https://picsum.photos/id/82/400/600);
+  background-image: url(https://picsum.photos/id/106/400/600);
   background-size: cover;
   background-position: center;
   grid-column: 5/7;
@@ -469,6 +469,10 @@ body {
   margin-top: auto;
 }
 
+.author-info p:first-child {
+  font-weight: var(--fw-semi-bold);
+}
+
 .avatar {
   width: 3rem;
 }
@@ -501,6 +505,11 @@ body {
   align-self: flex-end;
   padding: 0.5rem 1rem;
   border-radius: 36px;
+
+  &:hover {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-green-400);
+  }
 }
 
 .footer {
